@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>balls</title>
+        <style>
+            body {
+                margin:0;
+            }
+            #chat {
+                width:130px;
+                height:200px;
+                position:fixed;
+                left:0px;
+                top:0px;
+                background-color:white;
+                border:1px solid black;
+                overflow-y:scroll;
+            }
+            #inp {
+                width:80px;
+                position:fixed;
+                left:0px;
+                top:200px;
+                background-color:white;
+                border:1px solid black;
+            }
+            #submit {
+                word-wrap:break-word;
+                position:fixed;
+                left:80px;
+                top:200px;
+                background-color:white;
+                border:1px solid black;
+            }
+            #ready {
+                word-wrap:break-word;
+                position:fixed;
+                left:0px;
+                top:300px;
+                background-color:white;
+                border:1px solid black;
+                outline: none;
+            }
+            #annc {
+                position:absolute;
+                left:50%;
+                top:10%;
+                transform:translate(-50%,-50%);
+                color:black;
+                font-family:monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas></canvas>
+        
+        <h1 id="annc"></h1>
+        <div id="chat">
+            
+        </div>
+        <input id="inp"></input><button onclick="submit()" id="submit">submit</button>
+        <button onclick="this.blur();ready()" id="ready">ready</button>
+        <script src="https://cdn.socket.io/4.3.1/socket.io.min.js"></script>
+        <script src="static/obfuscated.js"></script>
+        
+    </body>
+</html>
